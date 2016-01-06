@@ -1,0 +1,211 @@
+.ns, h1,
+h2,
+h3, body, nav ul, .container aside blockquote, .container .skills-list ul {
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: #ff0000;
+  text-decoration: none; }
+
+h1,
+h2,
+h3 {
+  font-family: Helvetica, "Helvetica Neue";
+  line-height: 120%; }
+
+h1 {
+  font-size: 2.3em;
+  line-height: 105%;
+  margin-bottom: .62em; }
+
+h2 {
+  font-size: 1.75em;
+  color: #333333;
+  padding-top: 0.625em; }
+
+small {
+  font-size: .56em; }
+
+p {
+  margin-top: 0;
+  paddin-top: 0; }
+
+ul {
+  padding-left: 1.25em; }
+  ul li {
+    padding-bottom: .31em; }
+
+body {
+  font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica", "Helvetica Neue", "Lucida Grande";
+  color: #000;
+  background: #fff; }
+
+nav {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  padding: 0.6em 0em 0.6em 0em;
+  color: #fff;
+  text-align: right; }
+  nav strong:first-child {
+    padding-right: 0.6em; }
+  nav a {
+    color: #fff;
+    text-decoration: none; }
+  nav ul {
+    list-style: none;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 4em 2em;
+    transform: translate3d(0, -100em, 0);
+    transition: all .6s ease-out; }
+    nav ul li {
+      padding-bottom: 0.6em; }
+      nav ul li a {
+        font-size: 1em; }
+    nav ul div.close {
+      background: #fff;
+      color: #000;
+      border-radius: .8em;
+      font-weight: bold;
+      position: fixed;
+      top: 2em;
+      right: 2em;
+      padding: .6em 1em .6em 1em;
+      font-size: .6em; }
+  nav.active ul {
+    transform: translate3d(0, 0, 0); }
+
+.banner-image {
+  height: auto;
+  overflow: hidden; }
+  .banner-image img {
+    max-width: 100%;
+    display: block; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 2em 0em 2em; }
+  .container main h2 {
+    font-size: 1.31em; }
+  .container main h1 + span,
+  .container main h2 + span {
+    font-size: .75em; }
+  .container main p {
+    line-height: 140%; }
+  .container section {
+    padding-bottom: 2.5em; }
+  .container aside {
+    padding-top: 1.25em;
+    border-top: 1px solid #b3b3b3; }
+    .container aside blockquote {
+      font-size: .75em; }
+  .container .skills-list {
+    overflow: hidden; }
+    .container .skills-list ul {
+      padding-top: 1.25em; }
+      .container .skills-list ul li {
+        float: left;
+        width: 40%;
+        padding-right: 1.25em; }
+
+footer {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between; }
+
+.blog h1 {
+  margin-bottom: 0; }
+
+.work a {
+  text-decoration: none; }
+.work figcaption {
+  font-size: .75em; }
+.work img {
+  border: 1px solid #cccccc;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 0.62em;
+  margin-top: 0.62em; }
+
+.resume strong + p {
+  margin-top: 1em; }
+
+@media (min-width: 64em) {
+  .mobile {
+    display: none; }
+
+  nav {
+    display: block;
+    position: relative;
+    width: auto;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0; }
+    nav ul {
+      max-width: 76rem;
+      margin: auto;
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      padding: 0 0 0 1.25em;
+      align-items: stretch;
+      transform: translate3d(0, 0, 0);
+      background: transparent;
+      transition: none; }
+      nav ul li {
+        padding: 1.25em; }
+        nav ul li:hover {
+          background: #fff; }
+          nav ul li:hover a {
+            color: #000; }
+
+  .banner-image {
+    max-height: 20em; }
+
+  .container {
+    max-width: 76em;
+    margin: auto;
+    flex-direction: row;
+    align-items: flex-start; }
+    .container main {
+      width: 64em; }
+    .container aside {
+      width: 19.5em;
+      padding: 6em 0em 0em 2.5em;
+      border: 0; }
+      .container aside ul {
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0; }
+    .container section {
+      width: 80%; }
+    .container .skills-list ul li {
+      width: 30%; }
+    .container p {
+      line-height: 120%; }
+
+  .container.work div {
+    display: flex; }
+    .container.work div figcaption {
+      display: none; }
+    .container.work div a {
+      display: block;
+      overflow: hidden; }
+    .container.work div a:first-child {
+      flex-grow: 2;
+      margin-right: 1.25em; }
+
+  footer {
+    max-width: 76rem;
+    margin: auto; } }
+
+/*# sourceMappingURL=main.css.map */
