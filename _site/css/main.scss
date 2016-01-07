@@ -12,6 +12,16 @@ $link-color:#ff0000;
 $nav-background:#000;
 
 //Example of other color combinations you can use with this theme to liven the place up
+//$background:#000;
+//$nav-background:#000;
+//$panel-background:#000;
+//$footer-background:#000
+
+//$text:#000;
+//$headers:#000;
+//$links:#000;
+//$footer-text:#000;
+//$panel-text:#000;
 
 //remove any default spacing for a block level element
 .ns {
@@ -61,6 +71,7 @@ ul {
 body {
     @extend .ns;
     //Use native font for each platform 
+    //Font size 100% = 16px, adjust as needed and all other elements will resize relatively
     font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica", "Helvetica Neue", "Lucida Grande";
     color: $text-color;
     background: $background;
