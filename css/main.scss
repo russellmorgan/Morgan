@@ -1,18 +1,29 @@
-//USAGE
-//Font size is assumed 16px
+//NOTES:
+//Font size is assumed browser standard 16px
 //Convert any pixel requirements with the following formula: target ÷ context = result
 //Example: A 1024px wide element would be 64em (1024/16)
-//1.25em is 20px, use this as your universal padding to keep gutters consistent
-//Theme colors
+//Settings you'll want to probably use --> 1.25em is 20px, 0.62em is 10px
+
+
+//THEME COLORS
 $text-color:#000;
 $background:#fff;
 $link-color:#ff0000;
 $nav-background:#000;
+
+//Example of other color combinations you can use with this theme to liven the place up
+
 //remove any default spacing for a block level element
 .ns {
     padding: 0;
     margin: 0;
 }
+
+//-----------------------------------------------------------
+// Mobile first styles
+//-----------------------------------------------------------
+
+
 a {
     color: $link-color;
     text-decoration: none;
@@ -167,7 +178,7 @@ footer {
 //Blog post styles 
 .blog {
     h1 {
-        margin-bottom:0;
+        margin-bottom:.3em;
     }
 }
 
@@ -196,7 +207,7 @@ footer {
 }
 
 //-----------------------------------------------------------
-//Desktop styles
+// Desktop styles
 //-----------------------------------------------------------
 
 @media (min-width: 64em) {
@@ -217,7 +228,7 @@ footer {
             display: flex;
             justify-content: flex-start;
             position: relative;
-            padding: 0 0 0 1.25em;
+            padding: 0 0 0 0.62em;
             align-items: stretch;
             transform: translate3d(0, 0, 0);
             background: transparent;
@@ -233,10 +244,7 @@ footer {
             }
         }
     }
-    //remove this when ready...
-    .banner-image {
-        max-height: 20em;
-    }
+
     .container {
         max-width: 76em;
         margin: auto;
@@ -245,6 +253,7 @@ footer {
         align-items: flex-start;
         main {
             width: 64em;
+            //44.5 with no aside element
         }
         aside {
             width: 19.5em;
@@ -254,6 +263,7 @@ footer {
                 list-style: none;
                 padding-left: 0;
                 margin-left:0;
+                margin-bottom:2.5em;
             }
         }
         section {
@@ -264,6 +274,15 @@ footer {
         }
         p {
             line-height: 120%;
+        }
+        //Use these styles for images you want to float left or right
+        img.left {
+            float:left;
+            padding-right:1.25em;
+        }
+        img.right {
+            float:right;
+            padding-left:1.25em;
         }
     }
     .container.work {

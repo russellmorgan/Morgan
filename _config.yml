@@ -1,0 +1,16 @@
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+
+# Change these to reflect your site info
+title:               Morgan Jekyll
+tagline:             Another minimal, lightweight Jekyll theme
+url:                 https://github.com/russellmorgan/Morgan
+
+# Set up the main nav links here, can be anything internal or external
+pages_list:       
+  Home: '/'
+  About: '/about'
+  Archive: '/archive'
+  Google: 'https://google.com'

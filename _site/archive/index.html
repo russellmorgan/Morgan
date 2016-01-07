@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <title>Archive</title>
+</head>
+
+<body>
+    <a name="top"></a>
+    <nav ontouchstart="this.className='active'" id="menu">
+        <!-- this element is shown to mobile users to open the main nav -->
+        <strong class="mobile">Menu</strong>
+
+        <ul>
+            
+                <li><a href="/">Home</a></li>
+            
+                <li><a href="/about">About</a></li>
+            
+                <li><a href="/archive">Archive</a></li>
+            
+                <li><a href="https://google.com">Google</a></li>
+            
+            <!-- this element will show up on the mobile menu so users can close the overlay -->
+            <div class="close mobile" ontouchend="document.getElementById('menu').className=''">CLOSE</div>
+        </ul>
+    </nav>
+
+
+<div class="container blog">
+    <main>
+        <section>
+            <h1>Post Archives</h1> 
+            <ul>
+            
+              <li><a href="/category1/2016/01/06/post1/">Post title lorem ipsum 1</a></li>
+            
+              <li><a href="/category1/2016/01/05/post2/">Post title cillum dolor 2</a></li>
+            
+        </ul>
+        </section>
+        
+    </main>
+</div>
+
+<footer>
+    <small>@2016 Copyright information, right reserved etc.</small> 
+    <!-- If you have really long pages this is nice to have -->
+    <small><a href="#top">back to the top</a></small>
+</footer>
+
+</body>
+</html>

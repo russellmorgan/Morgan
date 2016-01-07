@@ -10,11 +10,14 @@
 <body>
     <a name="top"></a>
     <nav ontouchstart="this.className='active'" id="menu">
+        <!-- this element is shown to mobile users to open the main nav -->
         <strong class="mobile">Menu</strong>
 
         <ul>
-                <li>top link</li>
-
+            {% for page in site.pages_list %}
+                <li><a href="{{ page[1]  }}">{{ page[0] }}</a></li>
+            {% endfor %}
+            <!-- this element will show up on the mobile menu so users can close the overlay -->
             <div class="close mobile" ontouchend="document.getElementById('menu').className=''">CLOSE</div>
         </ul>
     </nav>

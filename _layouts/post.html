@@ -1,4 +1,6 @@
-{% include header.html %}
+---
+layout: default
+---
 
 <div class="container blog">
     <main>
@@ -10,14 +12,20 @@
     </main>
     
     <aside>
-        <h3>Older posts</h3>
+        {% if site.related_posts != empty %}
+        <h3>Related posts</h3>
         <ul>
-        {% for post in site.posts %}
-          <li><a href="{{post.url}}">{{ post.title }}</a><br><small> {{ post.date | date_to_string }} </small></li>
+            {% for post in site.related_posts limit:3 %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <h3>Recent posts</h3>
+        <ul>
+        {% for post in site.posts limit:5 %}
+          <li><a href="{{post.url}}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
     </aside>
     
 </div>
-
-{% include footer.html %}

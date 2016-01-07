@@ -1,16 +1,28 @@
 ---
 layout: default
-title: Welcome
+title: Home
 ---
 
-<div class="container">
+<div class="container blog">
+    <!-- the latest post -->
     <main>
-            <section>
-                <h1>Page Title</h1>
-                <p>Bacon ipsum dolor amet pork loin ut exercitation, eu ad turducken aliquip esse. Beef ipsum turducken consequat spare ribs. In flank picanha, chicken cupim pancetta ea nulla chuck. Strip steak sausage ham id ball tip velit aliqua capicola ex duis t-bone. Hamburger eu id deserunt turducken shank corned beef ex. Minim deserunt hamburger, swine pastrami cow ribeye et jerky sint labore porchetta.</p>
-            </section>
-        
-       
-        
+        <section>
+        {% for post in site.posts limit:1 %}
+          <h1>{{ post.title }}</h1>
+         <span>By {{post.author}} | Published on {{ post.date | date_to_string }} </span> 
+        </section>
+        {{ post.content }}
+        {% endfor %}
     </main>
+    
+    <!-- shows the last 10 posts, feel free to increment or remove that limit altogether -->
+    <aside>
+        <h3>Recent Posts</h3>
+        <ul>
+        {% for post in site.posts limit:10 %}
+          <li><a href="{{post.url}}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+        <a href="/archive/">All posts</a>
+    </aside>
 </div>

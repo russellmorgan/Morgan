@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="container blog">
+    <main>
+        <section>
+            <h1>Post Archives</h1> 
+            <ul>
+            {% for post in site.posts %}
+              <li><a href="{{post.url}}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+        </section>
+        
+    </main>
+</div>
