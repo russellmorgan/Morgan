@@ -21,7 +21,8 @@ I've styled this theme in the modern fashion of mobile first while using sass to
         
         
 The defalt version of this theme is the black and white you see before you but I've made sass variables for all the major elements and included a few alternative theme colors to spice things up. For inspiration I used various palettes from the always useful colourlovers.com. I'll admit the default has a distinct bootstrap version 3 look about the place but that was on purpose, sometimes familiarity can be a nice inspirational setting off point.
-<<<<<<< HEAD
+
+**Note:** This theme relies heavily on CSS flexbox and so it's not well suited for anyone trying to support IE9 and below.
 
 **Included themes examples**
 
@@ -34,4 +35,4 @@ The defalt version of this theme is the black and white you see before you but I
 This Morgan theme was crafted by [Russell Morgan](https://github.com/russellmorgan). He hopes it brings you much coding and layout joy.
 
 
-**Note:** This theme relies heavily on CSS flexbox and so it's not well suited for anyone trying to support IE9 and below.
+
