@@ -5,23 +5,46 @@
 //Settings you'll want to probably use --> 1.25em is 20px, 0.62em is 10px
 
 
-//THEME COLORS
-$text-color:#000;
+//BASIC THEME COLORS
 $background:#fff;
-$link-color:#ff0000;
 $nav-background:#000;
+$panel-background:#fff;
+$footer-background:#fff;
 
-//Example of other color combinations you can use with this theme to liven the place up
-//$background:#000;
-//$nav-background:#000;
-//$panel-background:#000;
-//$footer-background:#000
+$text:#000;
+$headers:#000;
+$links:#ff0000;
+$nav-text:#fff;
+$footer-text:lighten($text,50);
+$panel-text:lighten($text,10);
 
-//$text:#000;
-//$headers:#000;
-//$links:#000;
+//Examples of other color combinations you can use with this theme to liven the place up
+
+//GIANT GOLDFISH (really colorful!)
+//$background:#E0E4CC;
+//$nav-background:#69D2E7;
+//$panel-background:#69D2E7;
+//$footer-background:#E0E4CC;
+//
+//$text:#444;
+//$headers:#FA6900;
+//$links:#F38630;
+//$nav-text:#fff;
 //$footer-text:#000;
-//$panel-text:#000;
+//$panel-text:#fff;
+
+//CLOUDY DAY (The sky was the color of a dead television...)
+//$background:#555;
+//$nav-background:#000;
+//$panel-background:rgba(#A0A0A0,.8);
+//$footer-background:#555;
+//
+//$text:#EDEDED;
+//$headers:#EDEDED;
+//$links:#8BC410;
+//$nav-text:#8BC410;
+//$footer-text:lighten($text,50);
+//$panel-text:lighten($text,10);
 
 //remove any default spacing for a block level element
 .ns {
@@ -35,7 +58,7 @@ $nav-background:#000;
 
 
 a {
-    color: $link-color;
+    color: $links;
     text-decoration: none;
 }
 h1,
@@ -44,6 +67,7 @@ h3 {
     font-family: Helvetica, "Helvetica Neue";
     @extend .ns;
     line-height: 120%;
+    color:$headers;
 }
 h1 {
     font-size: 2.3em;
@@ -52,7 +76,7 @@ h1 {
 }
 h2 {
     font-size: 1.75em;
-    color: lighten($text-color, 20);
+    color: lighten($text, 20);
     padding-top: 0.625em;
 }
 small {
@@ -73,7 +97,7 @@ body {
     //Use native font for each platform 
     //Font size 100% = 16px, adjust as needed and all other elements will resize relatively
     font: normal 100% system, -apple-system, ".SFNSDisplay-Regular", "Roboto", "Helvetica", "Helvetica Neue", "Lucida Grande";
-    color: $text-color;
+    color: $text;
     background: $background;
 }
 nav {
@@ -88,9 +112,7 @@ nav {
         padding-right: 0.6em;
     }
     a {
-        color: $background;
-        text-decoration: none;
-        //text-transform: uppercase;
+        color: $nav-text;
     }
     //hide the submenu until requested.
     ul {
@@ -102,7 +124,7 @@ nav {
         left: 0;
         bottom: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background:rgba($nav-background,.9);
         padding: 4em 2em;
         //change these values to have the menu slide in from any direction, defaults to top
         transform: translate3d(0, -100em, 0);
@@ -115,8 +137,9 @@ nav {
         }
         div.close {
             background: $background;
-            color: $text-color;
-            border-radius: .8em;
+            color: $text;
+            //Use this if you like rounded buttons
+            //border-radius: .8em;
             font-weight: bold;
             position: fixed;
             top: 2em;
@@ -131,14 +154,7 @@ nav {
         }
     }
 }
-.banner-image {
-    height: auto;
-    overflow: hidden;
-    img {
-        max-width: 100%;
-        display: block;
-    }
-}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -159,8 +175,10 @@ nav {
         padding-bottom: 2.5em;
     }
     aside {
-        padding-top: 1.25em;
-        border-top: 1px solid lighten($text-color, 70);
+        padding: 1.25em;
+        border-top: 1px solid lighten($panel-text, 70);
+        background:$panel-background;
+        color:$panel-text;
         blockquote {
             @extend .ns;
             font-size: .75em;
@@ -249,7 +267,7 @@ footer {
                 &:hover {
                     background: $background;
                     a {
-                        color: $text-color;
+                        color: $text;
                     }
                 }
             }
@@ -268,7 +286,7 @@ footer {
         }
         aside {
             width: 19.5em;
-            padding: 6em 0em 0em 2.5em;
+            padding: 2.5em;
             border: 0;
             ul {
                 list-style: none;
@@ -317,6 +335,7 @@ footer {
     }
     footer {
         max-width: 76rem;
+        background:$footer-background;
         margin: auto;
     }
 }

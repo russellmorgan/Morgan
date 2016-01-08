@@ -12,7 +12,8 @@ h1,
 h2,
 h3 {
   font-family: Helvetica, "Helvetica Neue";
-  line-height: 120%; }
+  line-height: 120%;
+  color: #000; }
 
 h1 {
   font-size: 2.3em;
@@ -52,8 +53,7 @@ nav {
   nav strong:first-child {
     padding-right: 0.6em; }
   nav a {
-    color: #fff;
-    text-decoration: none; }
+    color: #fff; }
   nav ul {
     list-style: none;
     text-align: left;
@@ -73,7 +73,6 @@ nav {
     nav ul div.close {
       background: #fff;
       color: #000;
-      border-radius: .8em;
       font-weight: bold;
       position: fixed;
       top: 2em;
@@ -82,13 +81,6 @@ nav {
       font-size: .6em; }
   nav.active ul {
     transform: translate3d(0, 0, 0); }
-
-.banner-image {
-  height: auto;
-  overflow: hidden; }
-  .banner-image img {
-    max-width: 100%;
-    display: block; }
 
 .container {
   display: flex;
@@ -104,8 +96,10 @@ nav {
   .container section {
     padding-bottom: 2.5em; }
   .container aside {
-    padding-top: 1.25em;
-    border-top: 1px solid #b3b3b3; }
+    padding: 1.25em;
+    border-top: 1px solid #cccccc;
+    background: #fff;
+    color: #1a1a1a; }
     .container aside blockquote {
       font-size: .75em; }
   .container .skills-list {
@@ -177,7 +171,7 @@ footer {
       width: 64em; }
     .container aside {
       width: 19.5em;
-      padding: 6em 0em 0em 2.5em;
+      padding: 2.5em;
       border: 0; }
       .container aside ul {
         list-style: none;
@@ -212,6 +206,7 @@ footer {
 
   footer {
     max-width: 76rem;
+    background: #fff;
     margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */
