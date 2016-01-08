@@ -190,6 +190,8 @@ footer {
       width: 30%; }
     .container p {
       line-height: 120%; }
+    .container ol li {
+      margin-bottom: 0.62rem; }
     .container img.left {
       float: left;
       padding-right: 1.25em; }
